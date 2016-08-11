@@ -9,7 +9,7 @@ class Cats
   end
 
   #part 2
-  # cat1 = Cats.new("Kitty", "Salmon", "Always")
+  cat1 = Cats.new("Kitty", "Salmon", "Always")
   # #<Cats:0x007ffa329f8a60 @name="Kitty", @preferred_food="Salmon",
   # # @meal_time="Always">
 
@@ -36,3 +36,9 @@ end
 
 # cat3.meow
 # "My name is Chicken and I eat Cow at 2"
+
+cat1 = Cats.new("Kitty", "Salmon", "Always")
+
+puts cat1.meow
+
+#My name is Kitty and I eat Salmon at Always
