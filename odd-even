@@ -1,0 +1,32 @@
+'odd'
+1 - 1 = [1] # count = 1
+1 - 2 = [1] # count = 1
+1 - 3 = [1, 3] # count = 2
+1 - 4 = [1, 3] # count = 2
+1 - 5 = [1, 3, 5] # count = 3
+1 - 6 = [1, 3, 5] # count = 3
+1 - 7 = [1, 3, 5, 7] # count = 4
+1 - 8 = [1, 3, 5, 7] # count = 4
+1 - 9 = [1, 3, 5, 7, 9] # count = 5
+1 - 10 = [1, 3, 5, 7, 9] # count = 5
+
+def deliver(start_address, end_address)
+  if @side == 'odd'
+    #round up
+    num_houses = (end_address - start_address + 1) / 2
+  elsif @side = 'even'
+    #round down
+    num_houses = (end_address - start_address + 1) / 2
+  end
+end
+
+'even'
+1 - 2 = [2] # count = 1
+1 - 3 = [2] # count = 1
+1 - 4 = [2, 4] # count = 2
+1 - 5 = [2, 4] # count = 2
+1 - 6 = [2, 4, 6] # count = 3
+1 - 7 = [2, 4, 6] # count = 3
+1 - 8 = [2, 4, 6, 8] # count = 4
+1 - 9 = [2, 4, 6, 8] # count = 4
+1 - 10 = [2, 4, 6, 8, 10] # count = 5
