@@ -42,7 +42,8 @@ class Paperboy
 
 end
 
-
+def report
+  return "I'm #{name} and I delivered #{experience} paper and made #{earnings}."
 
 #
 #
