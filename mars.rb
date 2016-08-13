@@ -32,10 +32,17 @@ class Rover
     if @direction == 'W'
       then @x_variable -= 1
     if @direction == 'E'
-      then @x_variable 
+      then @x_variable
 
   end
-
-
+def right_turn
+  if @direction == 'N'
+    then @direction == 'E'
+  if @direction == 'E'
+    then @direction == 'S'
+  if @direction == 'S'
+    then @direction = 'W'
+  if @direction == 'W'
+    then @direction == 'N'
 
 end
