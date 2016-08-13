@@ -1,18 +1,5 @@
-class Creature
-  def initialize(name)
-    @name = name
-  end
-
-  def fight
-    return "Punch to the chops!"
-  end
+def instructions(input)
+    input.each_char do |instruction|
 end
-
-# Add your code below!
-class Dragon < Creature
-    def fight
-    puts "Instead of breathing fire..."
-    return super
-    end
 end
-Dragon
+puts instructions("nervneovnevn")

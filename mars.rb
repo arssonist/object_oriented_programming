@@ -9,23 +9,30 @@ class Rover
     @direction = direction
   end
 
-  def read_instruction(direction_variabel)
-    if L
+  def read_instruction([input_variable])
+    puts "enter R, L, or M"
+    #if multiple inputs at once then use each to input them.
+#need variable for this one
+    if instruction == 'L'
       puts "I'm turning left."
-    elsif R
+    elsif instruction == 'R'
       puts "I'm turing right."
-    elsif M
+    elsif instruction == 'M'
       puts "I'm moving forward one grid point"
     end
   end
 
 
   def move()
-    if @x_variable /changes/
-      change + @x_variable
-    elsif @y_variable /changes/
-      change + @y_variable
-    elsif condition
+    if @direction == 'N'
+    # move up 1 grid point
+      then @y_variable += 1
+    if @direction == 'S'
+      then @y_variable -= 1
+    if @direction == 'W'
+      then @x_variable -= 1
+    if @direction == 'E'
+      then @x_variable 
 
   end
 
