@@ -2,8 +2,8 @@ class Rover
 
   # @@coordinates = []
 
-  attr_reader :variable
-  attr_reader :y_variable
+  attr_reader :x_coordinate
+  attr_reader :y_coordinate
   attr_reader :direction
 
 
@@ -18,7 +18,7 @@ class Rover
     #need variable for this one
     if instruction == 'L'
       return self.left_turn
-      #upadate intance variable somehow
+    #upadate intance variable somehow
     elsif instruction == 'R'
       self.right_turn
     elsif instruction == 'M'
@@ -31,13 +31,13 @@ class Rover
   def move
     if @direction == 'N'
     # move up 1 grid point
-      then @y_variable += 1
+      then @y_coordinate += 1
     elsif @direction == 'S'
-      then @y_variable -= 1
+      then @y_coordinate -= 1
     elsif @direction == 'W'
-      then @x_variable -= 1
+      then @x_coordinate -= 1
     elsif @direction == 'E'
-      then @x_variable
+      then @x_coordinate
   end
   end
 
@@ -71,7 +71,24 @@ class Rover
     # end
 end
 
-  rover1 = Rover.new(10, 10)
+rover1 = Rover.new(10, 10)
 
+  puts "Enter x and y coordinates to determine plateau size"
+    plateau_x, plateau_y = gets.chomp.split(" ")
+    return plateau_x, plateau_y
 
-# plateau_x, plateau_y = gets.chomp.split(" ")
+  puts "Enter your starting x coordinate, y coordinate and facing direction."
+    x_coordinate, y_coordinate, direction = gets.chomp.split(" ")
+    return x_coordinate, y_coordinate, direction
+
+  puts "Enter the series of movements using N, S, E, W."
+    move = gets.chomp(" ")
+    return move
+
+  puts "Enter your new x and y coordinates, and the direction facing"
+    x_coordinate, y_coordinate, direction = gets.chomp.split(" ")
+    return x_coordinate, y_coordinate, direction
+
+  puts "Enter the series of movements using N, S, E, W."
+    move = gets.chomp(" ")
+    return move
