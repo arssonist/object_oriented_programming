@@ -1,12 +1,15 @@
-
-
-def money_made(quota, houses)
-
-  if houses > quota
-    puts money_extra = (houses * 0.25) + (0.50 * (houses - quota))
- ##first all houes at regualr rate, then add all houess at extra rate minus all houses not part over the quota.
-  else
-      puts money_regular = houses * 0.25
-  end
+instructino = 'R'
+def read_instruction(instruction)
+  #if multiple inputs at once then use each to input them.
+#need variable for this one
+  if instruction == 'L'
+    return self.left_turn
+    #upadate intance variable somehow
+  elsif instruction == 'R'
+    return.right_turn
+  elsif instruction == 'M'
+    return self.move
+  elsif instrucion != "R" || "L"|| "M"
+    puts "invalid input"
 end
-money_made(10, 40)
+end 
