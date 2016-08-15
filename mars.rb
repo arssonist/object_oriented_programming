@@ -8,8 +8,8 @@ class Rover
 
 
   def initialize(x_coordinate, y_coordinate, direction)
-    @x_coordinate = x_coordinate
-    @y_coordinate = y_coordinate
+    @x_coordinate = x_coordinate.to_i
+    @y_coordinate = y_coordinate.to_i
     @direction = direction
   end
 
@@ -56,12 +56,12 @@ class Rover
 
   def left_turn
     if @direction == 'N'
-      @direction = 'E'
-    elsif @direction == 'E'
+      @direction = 'W'
+    elsif @direction == 'W'
       @direction = 'S'
     elsif @direction == 'S'
-      @direction ='W'
-    elsif @direction == 'W'
+      @direction ='E'
+    elsif @direction == 'E'
       @direction = 'N'
     end
   end
@@ -80,21 +80,47 @@ end
   #   plateau_x, plateau_y = gets.chomp.split(" ")
   #   puts plateau_x, plateau_y
 
-  puts "Enter your starting x coordinate, y coordinate and facing direction."
 
-    x_coordinate, y_coordinate, direction = gets.chomp.split(" ")
+    puts "Enter your starting x coordinate, y coordinate and facing direction."
 
-    @rover1 = Rover.new(x_coordinate, y_coordinate, direction)
+    starting_x, starting_y, direction = gets.chomp.split(" ")
 
-  puts "Enter the series of movements using N, S, E, W."
-    move = gets.chomp(" ")
+    rover1 = Rover.new(starting_x, starting_y, direction)
 
-    puts move
+    puts "You have created a rover."
 
-  puts "Enter your new x and y coordinates, and the direction facing"
-    x_coordinate, y_coordinate, direction = gets.chomp.split(" ")
-    puts x_coordinate, y_coordinate, direction
 
-  puts "Enter the series of movements using N, S, E, W."
-    move = gets.chomp(" ")
-    puts move
+    # puts "Enter your starting x coordinate, y coordinate and facing direction."
+    #
+    # starting_x, starting_y, direction = gets.chomp.split(" ")
+
+    # @rover2 = Rover.new(starting_x, starting_y, direction)
+    #
+    # puts "You have created another rover."
+
+
+    puts "Enter the series of movements, in order, using R = right,L = left or M = move forward. Do not use spaces."
+
+    move = gets.chomp.split("")
+
+        move.each do |i|
+        rover1.read_instruction(i)
+      end
+
+
+    puts "I am Rover1 one am located at X #{rover1.x_coordinate}, Y #{rover1.y_coordinate}, facing #{rover1.direction} "
+
+    #
+    #
+    # puts "Enter the series of movements using R = right,L = left or M = move forward for this rover."
+    #
+    #
+    # puts "Enter the series of movements using R = right,L = left or M = move forward for this rover."
+    #
+    # move = gets.chomp.split(" ")
+    #
+    # @rover1.read_instruction(move)
+    #
+    # puts "Enter the series of movements using N, S, E, W."
+    # move = gets.chomp(" ")
+    # puts move
