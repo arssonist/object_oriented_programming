@@ -76,29 +76,29 @@ end
 
 
 #plateau size
-  # puts "Enter x and y coordinates to determine plateau size"
-  #   plateau_x, plateau_y = gets.chomp.split(" ")
-  #   puts plateau_x, plateau_y
+#   # puts "Enter x and y coordinates to determine plateau size"
+#   #   plateau_x, plateau_y = gets.chomp.split(" ")
+#   #   puts plateau_x, plateau_y
+#
+# # Rover1
+    puts "Enter your starting x coordinate, y coordinate and facing direction."
 
-#Rover1
-    # puts "Enter your starting x coordinate, y coordinate and facing direction."
-    #
-    #   starting_x, starting_y, direction = gets.chomp.split(" ")
-    #
-    #   rover1 = Rover.new(starting_x, starting_y, direction)
-    #
-    #   puts "You have created a rover."
-    #
-    #
-    # puts "Enter the series of movements, in order, using R = right,L = left or M = move forward. Do not use spaces."
-    #
-    #   move = gets.chomp.split("")
-    #
-    #   move.each do |i|
-    #   rover1.read_instruction(i)
-    #   end
-    #
-    #   puts "I am Rover1, located at X #{rover1.x_coordinate}, Y #{rover1.y_coordinate}, facing #{rover1.direction} "
+      starting_x, starting_y, direction = gets.chomp.split(" ")
+
+      rover1 = Rover.new(starting_x, starting_y, direction)
+
+      puts "You have created a rover."
+
+
+    puts "Enter the series of movements, in order, using R = right,L = left or M = move forward. Do not use spaces."
+
+      move = gets.chomp.split("")
+
+      move.each do |i|
+      rover1.read_instruction(i)
+      end
+
+      puts "I am Rover1, located at X #{rover1.x_coordinate}, Y #{rover1.y_coordinate}, facing #{rover1.direction} "
 
     #Rover2
     puts "Enter the starting coordinates for your second rover."
@@ -111,10 +111,10 @@ end
 
     puts "Enter the series of movements, in order, using R = right,L = left or M = move forward. Do not use spaces."
 
-      move = get.chomp.split(" ")
+      move = gets.chomp.split("")
 
       move.each do |i|
       rover2.read_instruction(i)
       end
 
-      puts "I am rover2, located X #{rover2.x_coordinate}, Y #{y_coordinate}, and facing #{rover2.direction}"
+      puts "I am rover2, located X #{rover2.x_coordinate}, Y #{rover2.y_coordinate}, and facing #{rover2.direction}"
