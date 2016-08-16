@@ -75,52 +75,46 @@ end
 
 
 
-
+#plateau size
   # puts "Enter x and y coordinates to determine plateau size"
   #   plateau_x, plateau_y = gets.chomp.split(" ")
   #   puts plateau_x, plateau_y
 
-
-    puts "Enter your starting x coordinate, y coordinate and facing direction."
-
-    starting_x, starting_y, direction = gets.chomp.split(" ")
-
-    rover1 = Rover.new(starting_x, starting_y, direction)
-
-    puts "You have created a rover."
-
-
+#Rover1
     # puts "Enter your starting x coordinate, y coordinate and facing direction."
     #
-    # starting_x, starting_y, direction = gets.chomp.split(" ")
-
-    # @rover2 = Rover.new(starting_x, starting_y, direction)
+    #   starting_x, starting_y, direction = gets.chomp.split(" ")
     #
-    # puts "You have created another rover."
+    #   rover1 = Rover.new(starting_x, starting_y, direction)
+    #
+    #   puts "You have created a rover."
+    #
+    #
+    # puts "Enter the series of movements, in order, using R = right,L = left or M = move forward. Do not use spaces."
+    #
+    #   move = gets.chomp.split("")
+    #
+    #   move.each do |i|
+    #   rover1.read_instruction(i)
+    #   end
+    #
+    #   puts "I am Rover1, located at X #{rover1.x_coordinate}, Y #{rover1.y_coordinate}, facing #{rover1.direction} "
 
+    #Rover2
+    puts "Enter the starting coordinates for your second rover."
+
+      starting_x, starting_y, direction = gets.chomp.split(" ")
+
+      rover2 = Rover.new(starting_x, starting_y, direction)
+
+      puts "You have created a new rover."
 
     puts "Enter the series of movements, in order, using R = right,L = left or M = move forward. Do not use spaces."
 
-    move = gets.chomp.split("")
+      move = get.chomp.split(" ")
 
-        move.each do |i|
-        rover1.read_instruction(i)
+      move.each do |i|
+      rover2.read_instruction(i)
       end
 
-
-    puts "I am Rover1 one am located at X #{rover1.x_coordinate}, Y #{rover1.y_coordinate}, facing #{rover1.direction} "
-
-    #
-    #
-    # puts "Enter the series of movements using R = right,L = left or M = move forward for this rover."
-    #
-    #
-    # puts "Enter the series of movements using R = right,L = left or M = move forward for this rover."
-    #
-    # move = gets.chomp.split(" ")
-    #
-    # @rover1.read_instruction(move)
-    #
-    # puts "Enter the series of movements using N, S, E, W."
-    # move = gets.chomp(" ")
-    # puts move
+      puts "I am rover2, located X #{rover2.x_coordinate}, Y #{y_coordinate}, and facing #{rover2.direction}"
