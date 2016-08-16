@@ -2,9 +2,9 @@ class Rover
 
   # @@coordinates = []
 
-  attr_reader :x_coordinate
-  attr_reader :y_coordinate
-  attr_reader :direction
+    attr_reader :x_coordinate
+    attr_reader :y_coordinate
+    attr_reader :direction
 
 
   def initialize(x_coordinate, y_coordinate, direction)
